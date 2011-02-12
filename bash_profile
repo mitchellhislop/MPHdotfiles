@@ -26,5 +26,6 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gbdel='git branch -d'
 alias gadd='git add .'
+alias sshmph='ssh root@173.230.144.30'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
