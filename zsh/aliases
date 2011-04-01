@@ -32,3 +32,5 @@ alias rst='touch tmp/restart.txt'
 
 # commands starting with % for pasting from web
 alias %=' '
+alias sshme='ssh root@173.230.144.30'
+alias sshigd='ssh root@ingroupcompanies.com'
