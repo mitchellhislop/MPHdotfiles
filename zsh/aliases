@@ -1,3 +1,7 @@
+#other
+alias sshme='ssh root@173.230.144.30'
+alias sshuttle='cd ~/sshuttle && ./sshuttle -r root@173.230.144.30 0.0.0.0/0 -v'
+
 # cd
 alias ..='cd ..'
 
@@ -32,5 +36,5 @@ alias rst='touch tmp/restart.txt'
 
 # commands starting with % for pasting from web
 alias %=' '
-alias sshme='ssh root@173.230.144.30'
+
 alias sshigd='ssh root@ingroupcompanies.com'

@@ -16,8 +16,10 @@ export ZSH_THEME="mitchellhislop"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails textmate ruby osx brew ssh-agent)
+plugins=(git rails textmate ruby osx brew ssh-agent github )
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+source ~/.dotfiles/zsh/aliases
