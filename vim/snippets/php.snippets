@@ -1,3 +1,7 @@
+# SnipMate is required to use snippets
+# Download SnipMate: http://www.vim.org/scripts/script.php?script_id=2540
+# Put this file in ~/.vim/snippets/ then restart vim
+# This snippet file includes many useful snippets for CodeIgniter. Please feel free to fork and contribute!
 snippet php
 	<?php
 	${1}
@@ -213,7 +217,10 @@ snippet fun
 	}
 # $... = array (...)
 snippet array
-	$${1:arrayName} = array('${2}' => ${3});${4}
+	$${1:arrayName} = array(
+		'${2}' => ${3},
+		);${4}
+##### CodeIgniter Snippets #####
 # Generic $this->
 snippet this
 	$this->${1:model/controller}->${2:method}(${3:array});${4}
@@ -223,7 +230,7 @@ snippet classm
 	/*
 	* ${1:Describe the model's purpose}
 	*/
-
+	
 	class ${2:model name} extends CI_Model
 	{
 		function __construct()
@@ -234,19 +241,41 @@ snippet classm
 	}
 # New Controller Class
 snippet classc
-	<?php
-	/*
-	* ${1:Describe the controller's purpose}
-	*/
+	<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+	/**
+	 * ${1:project_name}
+	 *
+	 * @package		${1:project_name}
+	 * @author	 * @copyright	Copyright (c) 2009, * @license		
+	 * @link			
+	 * @since			Version 1.0
+	 * @filesource
+	 */
 
-	class ${2:controller name} extends CI_Controller
-	{
-		function __construct()
+	// ------------------------------------------------------------------------
+
+	/**
+	 * ${3:classname}
+	 *
+	 * @package ${1:project_name}
+	 * @subpackage Controller
+	 * @since 1.0
+	 * @author  **/
+	class ${3:classname} extends ${4:Controller} {
+
+		/**
+		 * ${5:undocumented function}
+		 *
+		 * @return ${6:void}
+		 * @author 	 **/
+		function Index()
 		{
-			parent::__construct();
+			${0:// code...}
 		}
-		${3:// Code...}
+
 	}
+	// End File ${3:classname}.php
+	// File Source /system/application/controllers/${3:classname}.php
 # Form Validation Rules
 snippet formrule
 	$this->form_validation->set_rules('${1:field name}','${2:human name}', '${3:rules}');${4}
@@ -282,7 +311,7 @@ snippet returnif
 	if ($q->num_rows() > 0)
 	{
 		$${1:array} = $q->row_array();
-
+		
 		return $${1:array};
 	}
 	else
@@ -402,4 +431,18 @@ snippet anchor
 # Safe Mailto
 snippet mailto
 	<?php echo safe_mailto('${1:email}', '${2:text}'); ?>${3}
+snippet cimodload
+	$this->load->model('${1:name}_model');
+snippet cimodprop
+	$this->${1:Model_name}_model->${2:property}
+snippet cimodmeth
+	$this->${1:Model_name}_model->${2:method}(${3:args})
+snippet ciload
+	$this->load->${1:to_load}(${2:args});
+snippet cidb
+	$query->result();
+snippet cidba
+	$query->result_array();
 
+
+	
