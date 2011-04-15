@@ -204,4 +204,4 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
-
+map <F5> :NERDTreeToggle<cr>
