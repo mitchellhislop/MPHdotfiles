@@ -1,0 +1,21 @@
+= RubyGems
+
+(See Releases for release-specific information)
+
+== Installation
+
+Get it from RubyForge (http://rubygems.rubyforge.org) and run (as root, if appropriate and necessary)
+
+  ruby setup.rb
+
+For more details and other options, see:
+
+  ruby setup.rb --help
+
+* {User Guide/Installation}[http://docs.rubygems.org/read/chapter/3]
+
+Further documentation can be found on the Gem module.  (<tt>ri Gem</tt>)
+
+Thanks!
+
+-The RubyGems Team
